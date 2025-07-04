@@ -139,10 +139,16 @@ export default function ShopigranCompleteLanding() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <Image src="/shopigram-logo-updated.svg" alt="Shopigram" width={40} height={40} />
+              <Image
+                src="/shopigram-logo-updated.svg"
+                alt="Shopigram"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
               <span
                 className="text-xl sm:text-2xl font-normal text-[#00b8d4]"
                 style={{ fontFamily: "Hammersmith One, sans-serif" }}
@@ -185,7 +191,7 @@ export default function ShopigranCompleteLanding() {
 
       {/* 1. Hero Section */}
       <section className="py-8 sm:py-12 lg:py-16">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center min-h-[500px] lg:min-h-[600px]">
             {/* Left Content */}
             <div className="text-center lg:text-left order-1 lg:order-1 flex flex-col justify-center">
@@ -193,7 +199,7 @@ export default function ShopigranCompleteLanding() {
                 Descubre lo que a tus amigos les encanta.
                 <span className="text-[#00b8d4]"> Compra en segundos.</span>
               </h1>
-              <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 lg:mb-8 leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 lg:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Descubre, compra y gana recompensas con cada recomendación real.
               </p>
 
