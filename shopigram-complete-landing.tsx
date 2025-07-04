@@ -184,73 +184,75 @@ export default function ShopigranCompleteLanding() {
       </header>
 
       {/* 1. Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center min-h-[500px] lg:min-h-[600px]">
-          {/* Left Content */}
-          <div className="text-center lg:text-left order-1 lg:order-1 flex flex-col justify-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-              Descubre lo que a tus amigos les encanta.
-              <span className="text-[#00b8d4]"> Compra en segundos.</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 lg:mb-8 leading-relaxed">
-              Descubre, compra y gana recompensas con cada recomendación real.
-            </p>
+      <section className="py-8 sm:py-12 lg:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center min-h-[500px] lg:min-h-[600px]">
+            {/* Left Content */}
+            <div className="text-center lg:text-left order-1 lg:order-1 flex flex-col justify-center">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+                Descubre lo que a tus amigos les encanta.
+                <span className="text-[#00b8d4]"> Compra en segundos.</span>
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 lg:mb-8 leading-relaxed">
+                Descubre, compra y gana recompensas con cada recomendación real.
+              </p>
 
-            {/* Desktop CTA Button - Only visible on large screens */}
-            <div className="hidden lg:block">
+              {/* Desktop CTA Button - Only visible on large screens */}
+              <div className="hidden lg:block">
+                <button
+                  onClick={handleJoinWaitlist}
+                  className="px-6 sm:px-8 py-3 sm:py-4 bg-[#00b8d4] text-white text-lg sm:text-xl font-bold rounded-full hover:bg-[#0097a7] transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  Únete a la lista de espera
+                </button>
+              </div>
+            </div>
+
+            {/* Right Content - Friends Image */}
+            <div className="relative order-2 lg:order-2 flex justify-center lg:justify-end">
+              {/* Background decorative elements - hidden on mobile for cleaner look */}
+              <div className="absolute inset-0 flex items-center justify-center lg:justify-end">
+                <div className="hidden lg:block absolute w-80 h-80 sm:w-96 sm:h-96 lg:w-[500px] lg:h-[500px] bg-gradient-to-br from-[#00b8d4]/10 via-[#42B983]/5 to-[#FF6B6B]/10 rounded-full blur-3xl opacity-60"></div>
+                <div className="hidden lg:block absolute top-10 right-10 w-20 h-20 bg-[#00b8d4]/20 rounded-full blur-xl"></div>
+                <div className="hidden lg:block absolute bottom-20 left-10 w-16 h-16 bg-[#42B983]/20 rounded-full blur-xl"></div>
+                <div className="hidden lg:block absolute top-1/2 right-0 w-12 h-12 bg-[#FF6B6B]/20 rounded-full blur-lg"></div>
+              </div>
+
+              {/* Main Image */}
+              <div className="relative z-10 w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg">
+                <Image
+                  src="/recommend-product-to-friend.png"
+                  alt="Tres amigas jóvenes sonriendo y mirando recomendaciones en sus celulares"
+                  width={600}
+                  height={600}
+                  className="w-full h-auto object-contain drop-shadow-2xl lg:drop-shadow-2xl"
+                  priority
+                />
+
+                {/* Floating elements for extra visual appeal - only on desktop */}
+                <div className="hidden lg:block absolute -top-4 -left-4 w-8 h-8 bg-[#00b8d4] rounded-full opacity-20 animate-pulse"></div>
+                <div className="hidden lg:block absolute -bottom-6 -right-6 w-6 h-6 bg-[#42B983] rounded-full opacity-30 animate-pulse delay-1000"></div>
+                <div className="hidden lg:block absolute top-1/4 -right-8 w-4 h-4 bg-[#FF6B6B] rounded-full opacity-25 animate-pulse delay-500"></div>
+              </div>
+
+              {/* Floating text bubbles for context - only on desktop */}
+              <div className="hidden lg:block absolute top-16 left-8 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-2 shadow-lg border border-gray-100 animate-bounce">
+                <p className="text-sm font-medium text-gray-700">¡Me encanta! 😍</p>
+              </div>
+              <div className="hidden lg:block absolute bottom-24 right-4 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-2 shadow-lg border border-gray-100 animate-bounce delay-700">
+                <p className="text-sm font-medium text-gray-700">¡Compralo ya! 🛍️</p>
+              </div>
+            </div>
+
+            {/* Mobile CTA Button - Only visible on small screens, positioned last */}
+            <div className="lg:hidden order-3 text-center mt-6">
               <button
                 onClick={handleJoinWaitlist}
-                className="px-6 sm:px-8 py-3 sm:py-4 bg-[#00b8d4] text-white text-lg sm:text-xl font-bold rounded-full hover:bg-[#0097a7] transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="w-full sm:w-auto px-8 py-4 bg-[#00b8d4] text-white text-lg font-bold rounded-full hover:bg-[#0097a7] transition-all duration-200 shadow-lg hover:shadow-xl min-w-[200px]"
               >
                 Únete a la lista de espera
               </button>
             </div>
-          </div>
-
-          {/* Right Content - Friends Image */}
-          <div className="relative order-2 lg:order-2 flex justify-center lg:justify-end">
-            {/* Background decorative elements - hidden on mobile for cleaner look */}
-            <div className="absolute inset-0 flex items-center justify-center lg:justify-end">
-              <div className="hidden lg:block absolute w-80 h-80 sm:w-96 sm:h-96 lg:w-[500px] lg:h-[500px] bg-gradient-to-br from-[#00b8d4]/10 via-[#42B983]/5 to-[#FF6B6B]/10 rounded-full blur-3xl opacity-60"></div>
-              <div className="hidden lg:block absolute top-10 right-10 w-20 h-20 bg-[#00b8d4]/20 rounded-full blur-xl"></div>
-              <div className="hidden lg:block absolute bottom-20 left-10 w-16 h-16 bg-[#42B983]/20 rounded-full blur-xl"></div>
-              <div className="hidden lg:block absolute top-1/2 right-0 w-12 h-12 bg-[#FF6B6B]/20 rounded-full blur-lg"></div>
-            </div>
-
-            {/* Main Image */}
-            <div className="relative z-10 w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg">
-              <Image
-                src="/recommend-product-to-friend.png"
-                alt="Tres amigas jóvenes sonriendo y mirando recomendaciones en sus celulares"
-                width={600}
-                height={600}
-                className="w-full h-auto object-contain drop-shadow-2xl lg:drop-shadow-2xl"
-                priority
-              />
-
-              {/* Floating elements for extra visual appeal - only on desktop */}
-              <div className="hidden lg:block absolute -top-4 -left-4 w-8 h-8 bg-[#00b8d4] rounded-full opacity-20 animate-pulse"></div>
-              <div className="hidden lg:block absolute -bottom-6 -right-6 w-6 h-6 bg-[#42B983] rounded-full opacity-30 animate-pulse delay-1000"></div>
-              <div className="hidden lg:block absolute top-1/4 -right-8 w-4 h-4 bg-[#FF6B6B] rounded-full opacity-25 animate-pulse delay-500"></div>
-            </div>
-
-            {/* Floating text bubbles for context - only on desktop */}
-            <div className="hidden lg:block absolute top-16 left-8 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-2 shadow-lg border border-gray-100 animate-bounce">
-              <p className="text-sm font-medium text-gray-700">¡Me encanta! 😍</p>
-            </div>
-            <div className="hidden lg:block absolute bottom-24 right-4 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-2 shadow-lg border border-gray-100 animate-bounce delay-700">
-              <p className="text-sm font-medium text-gray-700">¡Compralo ya! 🛍️</p>
-            </div>
-          </div>
-
-          {/* Mobile CTA Button - Only visible on small screens, positioned last */}
-          <div className="lg:hidden order-3 text-center mt-6">
-            <button
-              onClick={handleJoinWaitlist}
-              className="w-full sm:w-auto px-8 py-4 bg-[#00b8d4] text-white text-lg font-bold rounded-full hover:bg-[#0097a7] transition-all duration-200 shadow-lg hover:shadow-xl min-w-[200px]"
-            >
-              Únete a la lista de espera
-            </button>
           </div>
         </div>
       </section>

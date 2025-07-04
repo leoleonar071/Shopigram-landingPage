@@ -11,9 +11,15 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Shopigram - Descubre, compra y comparte",
-  description: "La app donde las recomendaciones de tus amigos se convierten en tus mejores compras.",
+  title: "Shopigram: Tu red social para descubrir y comprar",
+  description:
+    "Descubre productos y marcas que recomiendan personas reales. Compra al instante, acumula recompensas y disfruta una experiencia social de e-commerce.",
   generator: "v0.dev",
+  icons: {
+    icon: "/shopigram-favicon.png",
+    shortcut: "/shopigram-favicon.png",
+    apple: "/shopigram-favicon.png",
+  },
 }
 
 export default function RootLayout({
@@ -25,7 +31,9 @@ export default function RootLayout({
     <html lang="es">
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet" />
-        <link rel="icon" href="/shopigram-favicon.png" sizes="any" />
+        <link rel="icon" type="image/png" href="/shopigram-favicon.png" />
+        <link rel="shortcut icon" type="image/png" href="/shopigram-favicon.png" />
+        <link rel="apple-touch-icon" href="/shopigram-favicon.png" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
